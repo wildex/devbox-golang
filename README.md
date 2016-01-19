@@ -90,7 +90,7 @@ Note: Please see the "known issues" below though, about messages about  failed t
 #### Clone the github repository:
 
 ```bash
-git clone git@github.com:samuell/devbox-golang
+git clone git@github.com:wildex/devbox-golang
 cd devbox-golang
 ```
 
