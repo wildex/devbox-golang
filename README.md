@@ -1,5 +1,5 @@
 # DevBox-Golang
-*Vagrant box backed by Docker or Virtualbox, with Ansible provisioning* and MYSQL database
+*Vagrant box backed by Docker or Virtualbox, with Ansible provisioning* 
 
 A Vagrant box (Virtualbox or Docker as providers) with Ansible provisioning
 for setting up a Vim and share-folder based Golang development environment.
