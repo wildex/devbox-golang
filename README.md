@@ -1,43 +1,8 @@
-# DevBox-Golong
-*Vagrant box backed by Docker or Virtualbox, with Ansible provisioning*
+# DevBox-Golang
+*Vagrant box backed by Docker or Virtualbox, with Ansible provisioning* and MYSQL database
 
 A Vagrant box (Virtualbox or Docker as providers) with Ansible provisioning
-for setting up a Vim-based Golang development environment.
-
-![Screenshot](golang-vagrant-ansible.png)
-
-## Update: Optional build script of latest Go 1.5 with the new cross-compilation support now included!
-
-As [blogged by Dave Cheney](http://dave.cheney.net/2015/03/03/cross-compilation-just-got-a-whole-lot-better-in-go-1-5), cross-compilation
-to different platforms is now (in the latest Go 1.5 development version) as simple as setting two environment variables and
-running go build!
-
-To let us laymen test this out easily, we have included an ansible role (aka "build script") for the latest Go 1.5
-in this repo. To activate it, just open up the `playbook.yml` file and uncomment the row `- golang-1.5`, and instead comment out
-the line saying `- golang`, before running `vagrant up docker` or `vagrant up virtualbox`.
-
-So, instead of looking like this:
-
-```yaml
-  roles:
-	- { role: dotfiles, sudo: false }
-    - { role: golang, sudo: false }
-   #- { role: golang-1.5, sudo: false }
-    - { role: youcompleteme, sudo: false } # Comment out this to save time!!
-```
-
-... it should look like this:
-
-```yaml
-  roles:
-	- { role: dotfiles, sudo: false }
-   #- { role: golang, sudo: false }
-    - { role: golang-1.5, sudo: false }
-    - { role: youcompleteme, sudo: false } # Comment out this to save time!!
-```
-Note: Please see the "known issues" below though, about messages about  failed tests, when building!
-
-(You might also consider commenting out the "YouCompleteMe" step to start with, if you want to play around with this quickly)
+for setting up a Vim and share-folder based Golang development environment.
 
 ## Ingredients
 
@@ -52,6 +17,7 @@ Note: Please see the "known issues" below though, about messages about  failed t
 - [Tig - text mode interface to git](http://jonas.nitro.dk/tig/)
 - [gdb - the GNU debugger](http://www.gnu.org/software/gdb)
 - [cgdb - Curses based user interface to gdb](https://cgdb.github.io)
+- mysql server
 
 ## Prerequisites
 
