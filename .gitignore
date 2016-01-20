@@ -22,3 +22,13 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
+# Vagrant files
+.vagrant/
+
+# Synchronized folder
+code/
+
+# Generated keys
+keys/vagrantssh.key
+keys/vagrantssh.key.pub
