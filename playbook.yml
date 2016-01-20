@@ -4,9 +4,10 @@
   vars:
       home: /home/vagrant
       document_root: /vagrant
+      mysql_port: 3306
   pre_tasks:
-      - name: Symlink sh to bash rather than dash
-        file: src=/bin/bash dest=/bin/sh state=link force=true
+      - name: Symlink to Go sources 
+        file: src=/home/vagrant/code/go/src dest=/vagrant/src state=link force=true
       - name: Update apt cache and optionally upgrade
         apt:
           update_cache=yes
