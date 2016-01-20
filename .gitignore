@@ -32,3 +32,6 @@ code/
 # Generated keys
 keys/vagrantssh.key
 keys/vagrantssh.key.pub
+
+# OS generated files
+roles/dotfiles/files/.vim/autoload
