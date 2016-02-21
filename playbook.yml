@@ -26,7 +26,9 @@
          - man-db
   roles:
       - { role: dotfiles, sudo: false }
-      - mysql
+      - { role: mysql, sudo: true}
+      - { role: nginx, sudo: true}
      #- { role: golang, sudo: false }
       - { role: golang-1.5, sudo: false }
      #- { role: youcompleteme, sudo: false } # Comment out this to save time!!
+      - { role: wegrunge, sudo: true}	

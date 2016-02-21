@@ -1,0 +1,13 @@
+---
+- name: Install Nginx
+  apt: name={{ item }} state=installed
+  with_items:
+   - nginx
+
+- name: Create Nginx configuration file
+  template: src=wegrunge.conf.j2 dest=/etc/nginx/conf.d/wegrunge.conf
+  notify:
+  - restart nginx 
+
+- name: Start Nginx
+  service: name=nginx state=started enabled=yes
