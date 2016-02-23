@@ -1,5 +1,0 @@
----
-- name: Install Wegrunge sources
-  shell: . /home/vagrant/.bashrc_mods && go get github.com/wildex/wegrunge
-- name: Create database for wegrunge
-  shell: mysql -uroot --execute="CREATE DATABASE wegrunge;"
